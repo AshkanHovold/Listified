@@ -58,7 +58,8 @@ export class InputService {
     return [
       { name: "Text", value: "text" },
       { name: "Text area", value: "textarea" },
-      { name: "Image", value: "image" }
+      { name: "Image", value: "image" },
+      {name: "Rich text", value: "richtext"}
     ];
   }
 
@@ -66,6 +67,7 @@ export class InputService {
     if (environment.debugOn) {
       console.log(formField);
     }
+    debugger;
     let form = this.forms.find(f => f.formId === formField.data.formId);
     let field = form.fields.find(f => f.fieldId === formField.data.fieldId);
 

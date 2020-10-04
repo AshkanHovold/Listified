@@ -16,6 +16,7 @@ export class ViewItemComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
 
   async ngOnInit() {
+    debugger;
     this.itemId = this.route.snapshot.paramMap.get('itemId');
     this.item = await this.dataService.getDataFromStorage(Constants.ITEM, this.itemId);
     this.template = await this.dataService.getDataFromStorage(Constants.TEMPLATE, this.item.templateId);

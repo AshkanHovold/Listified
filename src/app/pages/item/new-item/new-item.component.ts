@@ -32,6 +32,7 @@ export class NewItemComponent implements OnInit {
     this.template = await this.dataService.getDataFromStorage(Constants.TEMPLATE, this.templateId);
     this.item = this.inputService.getNewItem(this.templateId, this.formId, this.template.fields);
     this.inputService.newForm(this.formId, this.template.fields, this.templateId);
+    debugger;
     this.ready = true;
     if (environment.debugOn) {
       console.log(this.templateId);

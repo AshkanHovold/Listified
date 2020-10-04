@@ -1,0 +1,36 @@
+<app-li [render]="render">
+    <app-li-input>        
+        <editor
+          [init]="{
+            height: 500,
+            menubar: false,
+            plugins: [
+              'advlist autolink lists link image charmap print preview anchor',
+              'searchreplace visualblocks code fullscreen',
+              'insertdatetime table paste code help wordcount'
+            ],
+            toolbar:
+              'undo redo | formatselect | bold italic backcolor | \
+              alignleft aligncenter alignright alignjustify | \
+              bullist numlist outdent indent | removeformat | help'
+          }"
+          [(ngModel)]="data.value"
+          (onKeyUp)="fieldChanged()"
+        ></editor>        
+      <app-info-msg [msg]="msg"></app-info-msg>
+    </app-li-input>
+    <app-li-settings>
+      <app-radio [items]="[
+          { name: 'Yes', value: true },
+          { name: 'No', value: false }
+        ]" label="Required" [(selectedItem)]="data.settings.required"></app-radio>
+  
+      <!-- <app-input type="text" [(inputValue)]="data.settings.placeholder" label="Placeholder"></app-input> -->
+      <app-input type="text" [(inputValue)]="data.settings.label" label="Label"></app-input>
+    </app-li-settings>
+    <app-li-output>
+      <span class="text-wrapper" *ngIf="data.data">{{data.settings.label}}: 
+          <div [innerHtml]="data.data.value"></div></span>
+    </app-li-output>
+  </app-li>
+

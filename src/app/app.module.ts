@@ -47,6 +47,8 @@ import { NewThemeComponent } from './pages/theme/new-theme/new-theme.component';
 import { AddItemToListComponent } from './pages/list/add-item-to-list/add-item-to-list.component';
 import { ViewItemComponent } from './pages/item/view-item/view-item.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
+import { RichTextComponent } from './input/rich-text/rich-text.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -93,9 +95,10 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     NewThemeComponent,
     AddItemToListComponent,
     ViewItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    RichTextComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, EditorModule],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [TextComponent]

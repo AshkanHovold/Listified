@@ -1,0 +1,17 @@
+label {
+    font-family: var(--font);
+    font-size: var(--smalltext);
+    padding-left: var(--padding);
+}
+select {
+    font-family: var(--font);
+    font-size: var(--smalltext);
+    margin: var(--padding);
+    width: calc(100% - 4px);
+    box-sizing: border-box;
+}
+
+.select-wrapper {
+    
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+.toolbar-wrapper {
+  width: calc(100% - 2px);
+  min-width: 100px;
+  height: var(--toolbarheight);
+  background-color: var(--primary);
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+  font-family: var(--font);
+  font-size: var(--bigtext);
+}

@@ -48,7 +48,7 @@ import { AddItemToListComponent } from './pages/list/add-item-to-list/add-item-t
 import { ViewItemComponent } from './pages/item/view-item/view-item.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { RichTextComponent } from './input/rich-text/rich-text.component';
-import { EditorModule } from '@tinymce/tinymce-angular';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -99,7 +99,9 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     RichTextComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, EditorModule],
-  providers: [],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [TextComponent]
 })

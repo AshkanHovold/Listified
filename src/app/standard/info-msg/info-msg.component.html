@@ -1,3 +1,10 @@
-<div class="info-msg-wrapper" *ngIf="msg">
-  {{ msg }}
+<div class="alert alert-app-level alert-warning" *ngIf="msg">  
+    <div class="alert-item static">
+      <div class="alert-icon-wrapper">
+        <clr-icon class="alert-icon" shape="info-circle"></clr-icon>
+      </div>
+      <div class="alert-text">
+        {{ msg }}
+      </div>      
+    </div>  
 </div>

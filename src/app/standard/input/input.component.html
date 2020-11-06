@@ -1,4 +1,4 @@
 <div>
   <label [for]="name" *ngIf="label">{{ label }} <span *ngIf="required">*</span></label>
-  <input [type]="type" [(ngModel)]="inputValue" (ngModelChange)="inputValueChange.emit(inputValue)" [id]="name" />
+  <input [type]="type" [(ngModel)]="inputValue" (ngModelChange)="inputValueChange.emit(inputValue)" [id]="name" class="clr-input" />
 </div>

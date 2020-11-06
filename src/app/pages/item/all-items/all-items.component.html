@@ -1,6 +1,9 @@
 <div *ngIf="items">
     <app-card>
         <app-toolbar>Items</app-toolbar>
-        <app-item-list [items]="items"></app-item-list>
+        <app-card-body>
+            <app-item-list [items]="items"></app-item-list>
+        </app-card-body>
+        
     </app-card>
 </div>

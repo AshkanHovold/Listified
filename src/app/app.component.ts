@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
   async ngOnInit() {
     let themes = await this.dataService.getAllDataFromStorage(Constants.THEME);
     let selectedTheme = themes.find(t => t.selectedTheme);
-    this.dataService.setTheme(selectedTheme);
+    //this.dataService.setTheme(selectedTheme);
   }
 }

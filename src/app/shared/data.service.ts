@@ -48,6 +48,7 @@ export class DataService {
     if (!theme) {
       return;
     }
+    console.log("being executed");
     document.documentElement.style.setProperty('--background', theme.background);
     document.documentElement.style.setProperty('--smalltext', theme.smalltext);
     document.documentElement.style.setProperty('--bigtext', theme.bigtext);

@@ -1,19 +1,24 @@
 <app-card *ngIf="list">
     <app-toolbar>Add item to list: {{list.name}}</app-toolbar>
-    <app-text-container>Search for item to add to list</app-text-container>
-    <app-input type="text" label="Search" [(inputValue)]="searchTerm" (input)="validate()" required="true">
-    </app-input>
-    <app-info-msg [msg]="msg"></app-info-msg>
-    <app-radio [items]="[{name:'All templates', value:'all'}, {name:'One template', value:'one'}]" label="Templates"
-        [(selectedItem)]="optionSelected" (change)="validate()"></app-radio>
-    <app-select *ngIf="optionSelected==='one'" [options]="availableTemplates" [(inputValue)]="selectedTemplate"
-        label="Template" (change)="validate()"></app-select>
-    <app-button-group>
-        <app-button (click)="performSearch()" [disabled]="!valid">Search</app-button>
-        <app-button (click)="onClick()">Cancel</app-button>
-    </app-button-group>
+    <app-card-body>
+        <app-text-container>Search for item to add to list</app-text-container>
+        <app-input type="text" label="Search" [(inputValue)]="searchTerm" (input)="validate()" required="true">
+        </app-input>
+        <app-info-msg [msg]="msg"></app-info-msg>
+        <app-radio [items]="[{name:'All templates', value:'all'}, {name:'One template', value:'one'}]" label="Templates"
+            [(selectedItem)]="optionSelected" (change)="validate()"></app-radio>
+        <app-select *ngIf="optionSelected==='one'" [options]="availableTemplates" [(inputValue)]="selectedTemplate"
+            label="Template" (change)="validate()"></app-select>
+        <app-button-group>
+            <app-button (click)="performSearch()" [disabled]="!valid">Search</app-button>
+            <app-button (click)="onClick()">Cancel</app-button>
+        </app-button-group>
+    </app-card-body>
+    
 </app-card>
 <app-card *ngIf="itemsFound.length > 0">
     <app-toolbar>Items found</app-toolbar>
-    <app-item-list [list]="list" [items]="itemsFound"></app-item-list>
+    <app-card-body>
+        <app-item-list [list]="list" [items]="itemsFound"></app-item-list>
+    </app-card-body>    
 </app-card>

@@ -14,43 +14,44 @@ import { ViewListComponent } from './view-list/view-list.component';
 
 
 const routes: Routes = [{
-    path: '',
-    component: ListStartComponent,
-    children: [
-        {
-            path: 'all',
-            component: AllListsComponent
-        },
-      {
-        path: 'edit/:listId',
-        component: EditListComponent,
-      },
-      {
-        path: 'new',
-        component: NewListComponent,
-      },
-      {
-          path: 'view/:listId',
-          component: ViewListComponent
-      },
-      {
-          path:'add-item/:listId',
-          component: AddItemToListComponent
-      }
-    ],
-  }];
+  path: '',
+  component: ListStartComponent,
+  children: [
+    {
+      path: 'all',
+      component: AllListsComponent
+    },
+    {
+      path: 'edit/:listId',
+      component: EditListComponent,
+    },
+    {
+      path: 'new',
+      component: NewListComponent,
+    },
+    {
+      path: 'view/:listId',
+      component: ViewListComponent
+    },
+    {
+      path: 'add-item/:listId',
+      component: AddItemToListComponent
+    }
+  ],
+}];
 
 
 
 @NgModule({
-    imports: [CommonModule, FormsModule, RouterModule.forChild(routes), SharedModule],
-    declarations: [
-      ListStartComponent
+  imports: [CommonModule, FormsModule, RouterModule.forChild(routes), SharedModule],
+  declarations: [
+    ListStartComponent
     , AllListsComponent
     , EditListComponent
     , NewListComponent
     , ViewListComponent
-    , AddItemToListComponent]    
+    , AddItemToListComponent],
+  exports: [ListStartComponent]
 })
 export class ListModule {
 

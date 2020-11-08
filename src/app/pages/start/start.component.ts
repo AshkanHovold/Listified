@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent implements OnInit {
-  render: string = "";
+  render: string;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
 import { TextareaComponent } from '../standard/textarea/textarea.component';
 import { TextContainerComponent } from '../standard/text/text.component';
 
-const components = [
+export const components = [
   SidenavComponent, 
   ButtonComponent, 
   ButtonGroupComponent, 

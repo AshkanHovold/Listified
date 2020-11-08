@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,17 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  linkGroups: LinkGroup[];
-  constructor() { }
+  @Input() linkGroups: LinkGroup[];
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
+  navigateTo(url: string): void {
+    this.router.navigateByUrl(url);
+  }
 }
 
 export class LinkGroup {
   name: string;
-  links: LinkItem
+  links: LinkItem[];
 }
 
 export class LinkItem {

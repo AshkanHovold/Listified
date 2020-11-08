@@ -18,7 +18,7 @@ export class AllListsComponent implements OnInit {
   }
 
   newList() {
-    this.router.navigate(['/list/new']);
+    this.router.navigate(['/lists/new']);
   }
 
 }

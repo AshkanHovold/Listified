@@ -1,11 +1,21 @@
 <div class="content-container">
-    <app-sidenav></app-sidenav>
-    <div class="content-area">
-<router-outlet></router-outlet>
 
+  <app-sidenav [linkGroups]="linkGroups"></app-sidenav>
+  <!-- {{linkGroups | json}}
 
-
-        </div> 
-
-        
-        </div>  
+  <nav class="sidenav">
+    <section class="sidenav-content" *ngIf="linkGroups">
+      <section class="nav-group" *ngFor="let group of linkGroups">
+        <label for="tabexample2">{{ group.name }}</label>
+        <ul class="nav-list">
+          <li *ngFor="let groupItem of group.links">
+            <a class="nav-link" [routerLink]="groupItem.url" routerLinkActive="active">{{ groupItem.name }}</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </nav> -->
+  <div class="content-area">
+    <router-outlet></router-outlet>
+  </div>
+</div>

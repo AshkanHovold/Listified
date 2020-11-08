@@ -25,30 +25,16 @@ import { ThemePickerComponent } from './components/theme-picker/theme-picker.com
 //import { ItemListComponent } from './components/item-list/item-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SharedModule } from './shared/shared.module';
+import { SharedModule, components } from './shared/shared.module';
 import { ClarityModule } from '@clr/angular';
+
 
 @NgModule({
   declarations: [
-    AppComponent,    
-    //StartComponent,
-    // TemplateComponent,
-    // NewTemplateComponent,    
-    // EditTemplateComponent,    
-    InputHostDirective,    
-    // NewItemComponent,
-    // EditItemComponent,
-    // NewListComponent,    
-    // NewDashboardComponent,
-    // EditDashboardComponent,    
-    // AllItemsComponent,
-    ItemComponent,
-    //ThemeManagerComponent,        
-    ThemePickerComponent,
-    // EditThemeComponent,
-    // NewThemeComponent,
-    // AddItemToListComponent,
-    // ItemListComponent,    
+    AppComponent,        
+    InputHostDirective,        
+    ItemComponent,    
+    ThemePickerComponent    
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, SharedModule],    
   bootstrap: [AppComponent]  

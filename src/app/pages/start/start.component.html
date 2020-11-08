@@ -1,19 +1,26 @@
 <app-card>
-    <app-card-body>
-        <app-button-group>
-            <app-button (click)="render = 'input'">Input</app-button>
-            <app-button (click)="render = 'output'">Output</app-button>
-            <app-button (click)="render = 'settings'">Settings</app-button>
-            <app-button (click)="render = 'all'">All</app-button>
-        </app-button-group>
-        
-        <app-display-input type="text" [render]="render" [data]="{value:'hmm',settings: {label:'Testing'}}">
-        </app-display-input>
-        
-        <app-display-input type="textarea" [render]="render" [data]="{value:'hmm',settings: {label:'Testing'}}">
-        </app-display-input>
-        
-        Doing changes.
-        Another change done.
-    </app-card-body>
+  <app-card-body>
+    <app-button-group>
+      <app-button (click)="render = 'input'">Input</app-button>
+      <app-button (click)="render = 'output'">Output</app-button>
+      <app-button (click)="render = 'settings'">Settings</app-button>
+      <app-button (click)="render = 'all'">All</app-button>
+    </app-button-group>
+
+    <app-display-input
+      type="text"
+      [render]="render"
+      [data]="{ value: 'hmm', settings: { label: 'Testing' } }"
+    >
+    </app-display-input>
+
+    <app-display-input
+      type="textarea"
+      [render]="render"
+      [data]="{ value: 'hmm', settings: { label: 'Testing' } }"
+    >
+    </app-display-input>
+
+    Doing changes. Another change done.
+  </app-card-body>
 </app-card>

@@ -1,5 +1,5 @@
 <div class="main-container">
-    <!-- <div class="alert alert-app-level alert-info">
+  <!-- <div class="alert alert-app-level alert-info">
       <div class="alert-items">
         <div class="alert-item static">
           <div class="alert-icon-wrapper">
@@ -17,44 +17,43 @@
         <clr-icon aria-hidden="true" shape="close"></clr-icon>
       </button>
     </div> -->
-    <header class="header header-6">
-      <div class="branding">
-        <a href="javascript:void(0)">
-          <clr-icon shape="vm-bug"></clr-icon>
-          <span class="title">Listify</span>
-        </a>
-      </div>
-      <div class="header-nav">
-        <a href="javascript://" class="nav-link nav-icon">
-          <clr-icon shape="cloud"></clr-icon>
-        </a>
-        <a href="javascript://" class="active nav-link nav-icon">
-          <clr-icon shape="folder"></clr-icon>
-        </a>
-      </div>
-    </header>
-    <nav class="subnav">
-      <ul class="nav">
-        <li class="nav-item">          
-          <a class="nav-link" [routerLink]="['/start']" routerLinkActive="active">Start</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/lists']" routerLinkActive="active">Lists</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/templates']" routerLinkActive="active">Templates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/items']" routerLinkActive="active">Items</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/themes']" routerLinkActive="active">Themes</a>
-        </li>         
-      </ul>
-    </nav>    
+  <header class="header header-6">
+    <div class="branding">
+      <a href="javascript:void(0)">
+        <clr-icon shape="list"></clr-icon>
+        <span class="title">Listify</span>
+      </a>
+    </div>
+    <div class="header-nav">
+      <a href="javascript://" class="nav-link nav-icon">
+        <clr-icon shape="cloud"></clr-icon>
+      </a>
+      <a href="javascript://" class="active nav-link nav-icon">
+        <clr-icon shape="folder"></clr-icon>
+      </a>
+    </div>
+  </header>
+  <nav class="subnav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/start']" routerLinkActive="active">Start</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/lists']" routerLinkActive="active">Lists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/templates']" routerLinkActive="active">Templates</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/items']" routerLinkActive="active">Items</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/themes']" routerLinkActive="active">Themes</a>
+      </li>
+    </ul>
+  </nav>
 
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
-    
-  </div>
 
+</div>
